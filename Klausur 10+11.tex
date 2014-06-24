@@ -230,6 +230,46 @@ Der Übertragungsfaktor ist einfach ein Proportionalitätsfaktor.
 \end{center}
 
 
+\subsection{Aufgabe 3}
+
+\subsubsection*{a)}
+
+\[ R(\nu) = R_0 \cdot \left( 1 + \alpha \nu \right) \]
+
+$R_0$: Widerstand bei $\unit[0]{^\circ C}$ \\
+$\alpha$: Temperaturkoeffizient
+
+
+\subsubsection*{b)}
+
+Die allgemeine Formel für den Widerstand ist:
+
+\begin{align*}
+R &= \frac{U}{I} = \frac{0,0958}{0,9978 \cdot 10^{-3}} = 96,01
+\intertext{Für die Fehlerfortpflanzung müssen wir einmal nach der Spannung und einmal nach dem Strom ableiten:}
+\frac{\p R}{\p U} &= \frac{1}{I} \\
+\frac{\p R}{\p I} &= - \frac{U}{I^2}
+\intertext{Nun setzen wir ein:}
+\sigma &= \sqrt{\left( \frac{1}{I} \cdot S_U \right)^2 + \left( - \frac{U}{I^2} \cdot S_I \right)^2} \\ 
+&= \sqrt{\left( \frac{1}{0,9978 \cdot 10^{-3}} \cdot 3,939 \cdot 10^{-4}  \right)^2 + \left( - \frac{0,0958}{\left(0,9978 \cdot 10^{-3} \right)^2} \cdot 5,8 \cdot 10^{-6} \right)^2} = \unit[0,68]{\Omega}
+\intertext{Damit ist der Widerstand $\unit[96,01 \pm 0,68]{\Omega}$.}
+\end{align*}
+
+
+\subsubsection*{c)}
+
+Im Temperaturbereich um $\unit[-10]{^\circ C}$.
+
+
+\subsubsection*{d)}
+
+Der PT-100 ist ein passiver Sensor.
+
+
+\subsubsection*{e)}
+
+Die Schwingungen in konstanten Bereichen verschwinden.
+
 
 
 \end{document}
