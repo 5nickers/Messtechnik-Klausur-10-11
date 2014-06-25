@@ -271,5 +271,44 @@ Der PT-100 ist ein passiver Sensor.
 Die Schwingungen in konstanten Bereichen verschwinden.
 
 
+\subsection{Aufgabe 4}
+
+\subsubsection*{a)}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{A2b.png}
+\caption{$F_A$: Auftriebskraft, $F_W$: Widerstandskraft, $F_G$: Gewichtskraft}
+\end{figure}
+
+Der zu messende Luftstrom wird von unten in die Apparatur eingeleitet und drückt den Schwebekörper nach oben. Nachdem sich der Schwebekörper auf eine konstante Höhe eingependelt hat, kann man die Durchflussmenge anhand der Höhe bestimmen.
+
+\subsubsection*{c)}
+
+\begin{align*}
+\dot{V} &= \frac{1}{\sqrt{c_w}} \cdot \left( A_R - A_S \right) \cdot \sqrt{\frac{2 \cdot g \cdot V_s \cdot \left( \rho_s - \rho_m \right)}{\rho_m \cdot A_s}}
+\end{align*}
+
+\subsection*{d)}
+
+Wir gehen nach dem gleichen Verfahren vor wie in der Übungsaufgabe 21. Wir definieren einen Volumenstrom $\dot{V_2'}$ der einer $100\%$ Anzeige entspricht und rechnen später zurück. Zuerst stellen wir die Ströme ins Verhältnis:
+
+\begin{align*}
+\frac{\dot{V_2'}}{\dot{V_1}} &= \frac{\frac{1}{\sqrt{c_W}} \cdot \left( A_R - A_S \right) \cdot \sqrt{\frac{2 \cdot g \cdot V_S \cdot \left( \rho_s - \rho_{m2} \right)}{A_S \cdot \rho_{m2}}}}{\frac{1}{\sqrt{c_W}} \cdot \left( A_R - A_S \right) \cdot \sqrt{\frac{2 \cdot g \cdot V_S \cdot \left( \rho_s - \rho_{m2} \right)}{A_S \cdot \rho_{m2}}}}
+\intertext{Das fällt reduziert sich zu:}
+&= \sqrt{\frac{\rho_{m1} \cdot \left( \rho_s - \rho_{m2} \right)}{\rho_{m2} \cdot \left( \rho_s - \rho_{m1} \right)}}
+\intertext{Nun müssen wir die beiden Dichten in den beiden Zuständen berechnen:}
+\rho_1 &= \frac{p_1}{R \cdot T_1} = \frac{101300}{287,14 \cdot 293,15} = \unit[1,203]{kg/m^3} \\
+\rho_2 &= \frac{p_2}{R \cdot T_2} = \frac{200000}{287,14 \cdot 333,15} = \unit[2,091]{kg/m^3} \\
+\intertext{Jetzt setzen wir in unsere Verhältnisgleichung ein:}
+\frac{\dot{V_2'}}{\dot{V_1}} &= \sqrt{\frac{1,203 \cdot \left( 2700 - 2,091 \right)}{2,091 \cdot \left( 2700 - 1,203 \right)}} = 0,708
+\intertext{Der richtige Volumenstrom berechnet sich dann so:}
+\dot{V_2} &= 0,4 \cdot 0,708 \cdot 120 = \unit[36,4]{l/min}
+\end{align*}
+
+
+
+
+
 
 \end{document}
